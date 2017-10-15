@@ -1,21 +1,11 @@
 function newTodoItem() {
   let li = document.createElement("li");
-  li.setAttribute("id", "liItem");
-  let p = document.createElement("p");
-  p.setAttribute("id", "pTag");
   let inputValue = document.getElementById("input").value;
   let lol = document.createTextNode(inputValue);
-  let editButton = document.createElement('button');
-  editButton.setAttribute("class", "addBtn");
-  let deleteButton =  document.createElement('button');
-  deleteButton.setAttribute("class", "addBtn");
-  li.appendChild(lol);
-  document.getElementById("liItem").appendChild(p);
+  li.innerHTML = '<p class="pTag"></p> <button class="addBtn">Edit</button> <button class="addBtn">Delete</button>'
+//  li.appendChild(lol);
   document.getElementById("list").appendChild(li);
-
-  document.getElementById("input").value = "";
-  li.append(editButton);
-  li.append(deleteButton);
+  document.getElementsByClassName("pTag").appendChild(lol);
 };
 
 

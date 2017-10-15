@@ -12,6 +12,10 @@ body {
   overflow-y: hidden;
 }
 
+h1 {
+  text-shadow: 2px 2px black;
+}
+
 .header {
   text-align: center;
 }
