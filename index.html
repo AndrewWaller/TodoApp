@@ -5,16 +5,61 @@
 		<meta content="IE=edge" http-equiv="X-UA-Compatible">
 		<meta content="width=device-width, initial-scale=1" name="viewport"><!--for future reference andrew, put all other items in the head under these 3 tags for optimization. Also put scripts in the script section below the footer.-->
 		<title>Todo App</title>
-		<link href="css/styles.css" rel="stylesheet" type="text/css">
-
+		<link href="css/style.css" rel="stylesheet" type="text/css">
 	</head>
   <body>
-		<div id="myDIV" class="header">
+		<div class="header">
 		  <h1>To Do List</h1>
 		  <input type="text" id="input">
 		  <button onclick="newTodoItem()" class="addBtn">Add</button>
 		</div>
-		<ul id="list"></ul>
+		<ul id="list">
+			<li>
+				<p>Carve pumpkin</p>
+				<button class="addBtn">
+					Edit
+				</button>
+				<button class="addBtn">
+					Delete
+				</button>
+			</li>
+			<li>
+				<p>Buy candy</p>
+				<button class="addBtn">
+					Edit
+				</button>
+				<button class="addBtn">
+					Delete
+				</button>
+			</li>
+			<li>
+				<p>Find costume</p>
+				<button class="addBtn">
+					Edit
+				</button>
+				<button class="addBtn">
+					Delete
+				</button>
+			</li>
+			<li>
+				<p>Find costume for dog</p>
+				<button class="addBtn">
+					Edit
+				</button>
+				<button class="addBtn">
+					Delete
+				</button>
+			</li>
+			<li>
+				<p>Decorate the house</p>
+				<button class="addBtn">
+					Edit
+				</button>
+				<button class="addBtn">
+					Delete
+				</button>
+			</li>
+		</ul>
   <script src="js/scripts.js"></script>
 <!------------------------------------------------------------------------------end of script-->
   </body>
