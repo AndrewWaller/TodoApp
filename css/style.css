@@ -13,7 +13,7 @@ body {
 }
 
 h1 {
-  text-shadow: 2px 2px black;
+  text-shadow: 2px 2px rebeccapurple;
 }
 
 .header {
@@ -23,7 +23,7 @@ h1 {
 #input {
   color: black;
   background-color: orange;
-  border-color: black;
+  border-color: rebeccapurple;
 }
 
 .btn {

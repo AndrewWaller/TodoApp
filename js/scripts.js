@@ -10,11 +10,11 @@ add.addEventListener('click', function(){
   let arrayItem = new Item(input.value, idNum);
   array.push(arrayItem);
   let li = document.createElement("li");
-  li.setAttribute('class', 'liTag');
-  li.setAttribute('id', idNum);
+  //li.setAttribute('class', 'liTag');
+ // li.setAttribute('id', idNum);
   let inputValue = document.getElementById("input").value;
   let lol = document.createTextNode(inputValue);
-  li.innerHTML = '<p class="pTag"></p> <button id="edit" onclick="editTodoItem()" class="btn">Edit</button> <button onClick="deleteTodoItem(event)" class="btn" id="idNum">Delete</button>'
+  li.innerHTML = '<p class="pTag"></p> <button id="edit" onclick="editTodoItem(event)" class="btn">Edit</button> <button onClick="deleteTodoItem(event)" class="btn" id="idNum">Delete</button>'
   li.getElementsByClassName("pTag")[0].appendChild(lol);
   document.getElementById("list").appendChild(li);
 });
@@ -24,7 +24,13 @@ function deleteTodoItem(event) {
   node.parentNode.removeChild(node);
 };
 
-function editTodoItem() {
-  console.log('edit/change');
+function editTodoItem(event) {
+  let inputValue = document.getElementById("input").value;
+  let newInputValue = prompt("Change List Item:", inputValue);
+  if (newInputValue === '') {
+    alert('No change was made');
+  } else {
+      console.log(newInputValue);
+  };
 };
 
