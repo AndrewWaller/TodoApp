@@ -23,6 +23,7 @@ add.addEventListener('click', function(){
       li.getElementsByClassName("pTag")[0].appendChild(lol);
       document.getElementById("list").appendChild(li);
   }
+  document.getElementById('input').value='';
 });
 
 function deleteTodoItem(event) {
