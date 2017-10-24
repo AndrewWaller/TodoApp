@@ -19,7 +19,7 @@ add.addEventListener('click', function(){
       };
   } else {
       let li = document.createElement("li");
-      li.innerHTML = '<p id="paraTag" class="pTag"></p> <button id="edit" onclick="editTodoItem(event)" class="btn">Edit</button> <button onClick="deleteTodoItem(event)" class="btn" id="idNum">Delete</button>'
+      li.innerHTML = '<p id="paraTag" class="pTag"></p> <button id="edit" onclick="editTodoItem(event)" class="btn">Edit</button> <button onClick="deleteTodoItem(event)" class="btn">Delete</button> <label class="switch"> <input type="checkbox"> <span class="slider round"></span> </label>'
       li.getElementsByClassName("pTag")[0].appendChild(lol);
       document.getElementById("list").appendChild(li);
   }
@@ -49,3 +49,7 @@ if (event.keyCode == 13) {
     document.getElementById("add").click();
 }
 });
+
+var bg_colour = Math.floor(Math.random() * 16777215).toString(16);
+bg_colour = "#" + ("000000" + bg_colour).slice(-6);
+document.bgColor = bg_colour;
