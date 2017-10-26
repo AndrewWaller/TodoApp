@@ -71,12 +71,30 @@ function checkOffTodoItem(event) {
     let node = event.target.parentNode;
     let beforeParent = node.parentNode;
     let parent = beforeParent.parentNode;
+
+    console.log(beforeParent.childNodes[1]);
+
+    console.log(beforeParent.childNodes[3]);
+
+
     if (parent.classList[0] == "li01") {
         parent.classList.remove("li01");
         parent.classList.add("li02");
+        beforeParent.classList.remove("bottom-nav");
+        beforeParent.classList.add("bottom-nav-2");
+        beforeParent.childNodes[1].classList.remove("btn");
+        beforeParent.childNodes[1].classList.add("btn2");
+        beforeParent.childNodes[3].classList.remove("btn");
+        beforeParent.childNodes[3].classList.add("btn2");
     } else if (parent.classList[0] == "li02") {
         parent.classList.remove("li02");
         parent.classList.add("li01");
+        beforeParent.classList.remove("bottom-nav-2");
+        beforeParent.classList.add("bottom-nav");
+        beforeParent.childNodes[1].classList.remove("btn2");
+        beforeParent.childNodes[1].classList.add("btn");
+        beforeParent.childNodes[3].classList.remove("btn2");
+        beforeParent.childNodes[3].classList.add("btn");
     }
 };
 
