@@ -32,7 +32,7 @@ add.addEventListener('click', function(){
   } else {
       let li = document.createElement("li");
       li.setAttribute("class", "li01");
-      li.innerHTML = '<p id="paraTag" class="pTag"></p> <button id="edit" onclick="editTodoItem(event)" class="btn">Edit</button> <button onClick="deleteTodoItem(event)" class="btn">Delete</button> <label class="switch"> <input type="checkbox" onclick="checkOffTodoItem(event)"> <span class="slider round"></span> </label>'
+      li.innerHTML = '<h2 id="paraTag" class="pTag"></h2> <button id="edit" onclick="editTodoItem(event)" class="btn">Edit</button> <button onClick="deleteTodoItem(event)" class="btn">Delete</button> <label class="switch"> <input type="checkbox" onclick="checkOffTodoItem(event)"> <span class="slider round"></span> </label>'
       li.getElementsByClassName("pTag")[0].appendChild(lol);
       document.getElementById("list").appendChild(li);
   };
@@ -43,7 +43,10 @@ add.addEventListener('click', function(){
 
 function deleteTodoItem(event) {
     let node = event.target.parentNode;
-    node.parentNode.removeChild(node);
+    let deleteDaItem = confirm("Are you sure you would like to delete this item?");
+    if (deleteDaItem == true) {
+        node.parentNode.removeChild(node);
+    } 
 };
 
 // edit button
@@ -57,7 +60,7 @@ function editTodoItem(event) {
         alert("You didn't type anything!");
     } else {
       let node = event.target.parentNode;
-      node.innerHTML = '<p id="paraTag" class="pTag"> ' + newInputValue + '</p> <button id="edit" onclick="editTodoItem(event)" class="btn">Edit</button> <button onClick="deleteTodoItem(event)" class="btn">Delete</button> <label class="switch"> <input type="checkbox" onclick="checkOffTodoItem(event)"> <span class="slider round"></span> </label>';
+      node.innerHTML = '<h2 id="paraTag" class="pTag"> ' + newInputValue + '</h2> <button id="edit" onclick="editTodoItem(event)" class="btn">Edit</button> <button onClick="deleteTodoItem(event)" class="btn">Delete</button> <label class="switch"> <input type="checkbox" onclick="checkOffTodoItem(event)"> <span class="slider round"></span> </label>';
     };
 };
 
