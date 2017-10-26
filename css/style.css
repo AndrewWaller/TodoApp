@@ -17,13 +17,17 @@ h1 {
 }
 
 .li01 {
-  /*background-color: rgba(153, 0, 153, .5);*/
   background-color: rgba(0,0,0,.6);
+  border-radius: 20px;
 }
 
 .li02 {
   background-color: rgba(255,165,0,.6);
   color: purple;
+}
+
+.h2tag {
+  padding-left: 10px;
 }
 
 .header {
@@ -43,7 +47,14 @@ h1 {
 .btn {
   color: black;
   background-color: orange;
-  border-color: orange;
+  border: 0px solid orange;
+}
+
+.btnBig {
+  height: 34px;
+  border-radius: 15px;
+  width: 60px;
+  margin-right: 10px;
 }
 
 .btn2 {
@@ -52,13 +63,18 @@ h1 {
   border-color: rebeccapurple;
 }
 
+.bottom-nav {
+  background-color: purple;
+  border-radius: 0px 0px 20px 20px;
+}
+
 /*==========================Switch css==*/
 
 .switch {
   position: relative;
   display: inline-block;
-  width: 45px;
-  height: 21px;
+  width: 60px;
+  height: 34px;
   float: right;
 }
 
@@ -82,8 +98,8 @@ h1 {
 .slider:before {
   position: absolute;
   content: "";
-  height: 13px;
-  width:  13px;
+  height: 26px;
+  width:  26px;
   left: 4px;
   bottom: 4px;
   background-color: white;

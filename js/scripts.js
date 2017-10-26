@@ -32,8 +32,8 @@ add.addEventListener('click', function(){
   } else {
       let li = document.createElement("li");
       li.setAttribute("class", "li01");
-      li.innerHTML = '<h2 id="paraTag" class="pTag"></h2> <button id="edit" onclick="editTodoItem(event)" class="btn">Edit</button> <button onClick="deleteTodoItem(event)" class="btn">Delete</button> <label class="switch"> <input type="checkbox" onclick="checkOffTodoItem(event)"> <span class="slider round"></span> </label>'
-      li.getElementsByClassName("pTag")[0].appendChild(lol);
+      li.innerHTML = '<h2 id="paraTag" class="h2tag"></h2> <div class="bottom-nav"> <button id="edit" onclick="editTodoItem(event)" class="btn btnBig">Edit</button> <button onClick="deleteTodoItem(event)" class="btn btnBig">Delete</button> <label class="switch"> <input type="checkbox" onclick="checkOffTodoItem(event)"> <span class="slider round"></span> </label> </div>';  
+      li.getElementsByClassName("h2tag")[0].appendChild(lol);
       document.getElementById("list").appendChild(li);
   };
   document.getElementById('input').value='';
@@ -43,9 +43,10 @@ add.addEventListener('click', function(){
 
 function deleteTodoItem(event) {
     let node = event.target.parentNode;
+    let parentLi = node.parentNode;
     let deleteDaItem = confirm("Are you sure you would like to delete this item?");
     if (deleteDaItem == true) {
-        node.parentNode.removeChild(node);
+        parentLi.parentNode.removeChild(parentLi);
     } 
 };
 
@@ -60,7 +61,7 @@ function editTodoItem(event) {
         alert("You didn't type anything!");
     } else {
       let node = event.target.parentNode;
-      node.innerHTML = '<h2 id="paraTag" class="pTag"> ' + newInputValue + '</h2> <button id="edit" onclick="editTodoItem(event)" class="btn">Edit</button> <button onClick="deleteTodoItem(event)" class="btn">Delete</button> <label class="switch"> <input type="checkbox" onclick="checkOffTodoItem(event)"> <span class="slider round"></span> </label>';
+      node.parentNode.innerHTML = '<h2 id="paraTag" class="h2tag">' + newInputValue + '</h2> <div class="bottom-nav"> <button id="edit" onclick="editTodoItem(event)" class="btn btnBig">Edit</button> <button onClick="deleteTodoItem(event)" class="btn btnBig">Delete</button> <label class="switch"> <input type="checkbox" onclick="checkOffTodoItem(event)"> <span class="slider round"></span> </label> </div>';
     };
 };
 
@@ -85,6 +86,6 @@ document.getElementById("input").addEventListener("keyup", function(event) {
 event.preventDefault();
 if (event.keyCode == 13) {
     document.getElementById("add").click();
-}
+    }
 });
 
