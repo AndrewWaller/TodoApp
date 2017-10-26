@@ -16,6 +16,14 @@ h1 {
   text-shadow: 2px 2px rebeccapurple;
 }
 
+.li01 {
+  background-color: rgba(153, 0, 153, .5);
+}
+
+.li02 {
+  background-color: rgba(153, 0, 153, .0);
+}
+
 .header {
   text-align: center;
 }
@@ -37,8 +45,8 @@ h1 {
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 45px;
+  height: 21px;
   float: right;
 }
 
@@ -62,8 +70,8 @@ h1 {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width:  26px;
+  height: 13px;
+  width:  13px;
   left: 4px;
   bottom: 4px;
   background-color: white;
