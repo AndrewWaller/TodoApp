@@ -24,6 +24,7 @@ h1 {
 .li02 {
   background-color: rgba(255,165,0,.6);
   color: purple;
+  border-radius: 20px;
 }
 
 .h2tag {

@@ -69,8 +69,8 @@ function editTodoItem(event) {
 
 function checkOffTodoItem(event) {
     let node = event.target.parentNode;
-    // console.log(node);
-    let parent = node.parentNode;
+    let beforeParent = node.parentNode;
+    let parent = beforeParent.parentNode;
     if (parent.classList[0] == "li01") {
         parent.classList.remove("li01");
         parent.classList.add("li02");
