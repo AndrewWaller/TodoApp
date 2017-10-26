@@ -1,16 +1,16 @@
-var idNum = -1;
-var array = [];
+//var idNum = -1;
+//var array = [];
 
 //adds new item to the list
 
 add.addEventListener('click', function(){
-    function Item(value, index) {
+    /*function Item(value, index) {
         this.value= value;
         this.index= index;
     }
     idNum++;
     let arrayItem = new Item(input.value, idNum);
-    array.push(arrayItem);    
+    array.push(arrayItem);*/    
   let inputValue = document.getElementById("input").value;
   let lol = document.createTextNode(inputValue);
   if (inputValue === '') {
