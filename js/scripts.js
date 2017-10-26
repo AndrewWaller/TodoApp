@@ -14,7 +14,7 @@ add.addEventListener('click', function(){
   let inputValue = document.getElementById("input").value;
   let lol = document.createTextNode(inputValue);
   if (inputValue === '') {
-    alert("You didn't type anything");
+    alert("You didn't type anything!");
   } else if (inputValue === 'This is the best final project ever!') {
       alert("I know, thanks!");
   } else if (inputValue === "This is lame") {
@@ -32,7 +32,7 @@ add.addEventListener('click', function(){
   } else {
       let li = document.createElement("li");
       li.setAttribute("class", "li01");
-      li.innerHTML = '<p id="paraTag" class="pTag"></p> <button id="edit" onclick="editTodoItem(event)" class="btn">Edit</button> <button onClick="deleteTodoItem(event)" class="btn">Delete</button> <label class="switch" onclick="checkOffTodoItem(event)"> <input type="checkbox"> <span class="slider round"></span> </label>'
+      li.innerHTML = '<p id="paraTag" class="pTag"></p> <button id="edit" onclick="editTodoItem(event)" class="btn">Edit</button> <button onClick="deleteTodoItem(event)" class="btn">Delete</button> <label class="switch"> <input type="checkbox" onclick="checkOffTodoItem(event)"> <span class="slider round"></span> </label>'
       li.getElementsByClassName("pTag")[0].appendChild(lol);
       document.getElementById("list").appendChild(li);
   };
@@ -53,6 +53,8 @@ function editTodoItem(event) {
     let newInputValue = prompt("Change List Item:", inputValue);
     if (newInputValue == inputValue) {
       alert('No change were made');
+    } else if (newInputValue == '') {
+        alert("You didn't type anything!");
     } else {
       let node = event.target.parentNode;
       node.innerHTML = '<p id="paraTag" class="pTag"> ' + newInputValue + '</p> <button id="edit" onclick="editTodoItem(event)" class="btn">Edit</button> <button onClick="deleteTodoItem(event)" class="btn">Delete</button> <label class="switch"> <input type="checkbox" onclick="checkOffTodoItem(event)"> <span class="slider round"></span> </label>';
@@ -63,11 +65,12 @@ function editTodoItem(event) {
 
 function checkOffTodoItem(event) {
     let node = event.target.parentNode;
+    // console.log(node);
     let parent = node.parentNode;
-    if (parent.classList == "li01") {
+    if (parent.classList[0] == "li01") {
         parent.classList.remove("li01");
         parent.classList.add("li02");
-    } else if (parent.classList == "li02") {
+    } else if (parent.classList[0] == "li02") {
         parent.classList.remove("li02");
         parent.classList.add("li01");
     }
