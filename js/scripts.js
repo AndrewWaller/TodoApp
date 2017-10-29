@@ -1,16 +1,6 @@
-//var idNum = -1;
-//var array = [];
-
 //adds new item to the list
 
-add.addEventListener('click', function(){
-    /*function Item(value, index) {
-        this.value= value;
-        this.index= index;
-    }
-    idNum++;
-    let arrayItem = new Item(input.value, idNum);
-    array.push(arrayItem);*/    
+add.addEventListener('click', function(){   
   let inputValue = document.getElementById("input").value;
   let lol = document.createTextNode(inputValue);
   if (inputValue === '') {
@@ -71,13 +61,7 @@ function checkOffTodoItem(event) {
     let node = event.target.parentNode;
     let beforeParent = node.parentNode;
     let parent = beforeParent.parentNode;
-
-    console.log(beforeParent.childNodes[1]);
-
-    console.log(beforeParent.childNodes[3]);
-
-
-    if (parent.classList[0] == "li01") {
+ if (parent.classList[0] == "li01") {
         parent.classList.remove("li01");
         parent.classList.add("li02");
         beforeParent.classList.remove("bottom-nav");
